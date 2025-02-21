@@ -2,6 +2,7 @@ package edu.iu.p466.prime_service.service;
 
 import edu.iu.p466.prime_service.model.Customer;
 import edu.iu.p466.prime_service.repository.IAuthenticationRepository;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -22,7 +23,7 @@ public class AuthenticationService implements IAuthenticationService, UserDetail
 
     IAuthenticationRepository authenticationRepository;
 
-    public AuthenticationService(IAuthenticationRepository authenticationRepository, AuthenticationManager authenticationManager){
+    public AuthenticationService(IAuthenticationRepository authenticationRepository){
         this.authenticationRepository = authenticationRepository;
     }
 
