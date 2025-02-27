@@ -1,0 +1,10 @@
+services:
+  primes-service:
+    image: primes-service
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    container_name: primes-service
+    ports:
+      - "4001:8080"
+    restart: "no"
