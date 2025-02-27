@@ -8,3 +8,12 @@ services:
     ports:
       - "4001:8080"
     restart: "no"
+
+  primes-service-database-postgres:
+    image: postgres:alpine
+    container_name: primes-database
+    ports:
+      - "5001:5432"
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DP: primes
